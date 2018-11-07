@@ -1,17 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="ISO-8859-1">
 		<title>Type Converter</title>
 	</head>
 	<body>
 		<h2>Type Converter</h2><hr>
 		<form action="/login.do" method="post">
-			<b>Ascii</b><br>
-			<textarea rows="5" cols="100" name="asciiString" placeholder="Hello World!">${newAsciiString}</textarea>
-			<input type="submit" name="submitAscii" value="Encode"><br>
+			<b>ISO 8859-1</b><br>
+			<textarea rows="5" cols="100" name="iso_8859_1String" placeholder="Hello World!">${newIso_8859_1String}</textarea>
+			<input type="submit" name="submitIso_8859_1" value="Encode"><br>
 			<b>Base64</b><br>
 			<textarea rows="5" cols="100" name="base64String" placeholder="SGVsbG8gV29ybGQh">${newBase64String}</textarea>
 			<input type="submit" name="submitBase64" value="Encode"><br>

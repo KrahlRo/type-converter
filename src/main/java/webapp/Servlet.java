@@ -21,13 +21,13 @@ public class Servlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		Converter converter;
-		if (request.getParameter("submitAscii") != null) {
-			String string = request.getParameter("asciiString");
-			if (InputValidator.inputAscii(string)) {
-				converter = Converter.fromAsciiString(string);
+		if (request.getParameter("submitIso_8859_1") != null) {
+			String string = request.getParameter("iso_8859_1String");
+			if (InputValidator.inputIso_8859_1(string)) {
+				converter = Converter.fromIso_8859_1String(string);
 			} else {
-				request.setAttribute("error", "illegal input: Ascii");
-				converter = Converter.fromAsciiString("");
+				request.setAttribute("error", "illegal input: ISO 8859-1");
+				converter = Converter.fromIso_8859_1String("");
 			}			
 		} else if (request.getParameter("submitBase64") != null) {
 			String string = request.getParameter("base64String");
@@ -62,9 +62,9 @@ public class Servlet extends HttpServlet {
 				converter = Converter.fromBinaryString("");
 			}		
 		} else {
-			converter = Converter.fromAsciiString("");
+			converter = Converter.fromIso_8859_1String("");
 		}	
-	    request.setAttribute("newAsciiString", converter.toAsciiString());
+	    request.setAttribute("newIso_8859_1String", converter.toIso_8859_1String());
 	    request.setAttribute("newBase64String", converter.toBase64String());
 	    request.setAttribute("newDecimalString", converter.toDecimalString());
 	    request.setAttribute("newHexadecimalString", converter.toHexadecimalString());
