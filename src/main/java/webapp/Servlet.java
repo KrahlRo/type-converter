@@ -26,7 +26,7 @@ public class Servlet extends HttpServlet {
 			if (InputValidator.inputIso_8859_1(string)) {
 				converter = Converter.fromIso_8859_1String(string);
 			} else {
-				request.setAttribute("error", "illegal input: ISO 8859-1");
+				request.setAttribute("iso_8859_1Error", "illegal input: ISO 8859-1");
 				converter = Converter.fromIso_8859_1String("");
 			}			
 		} else if (request.getParameter("submitBase64") != null) {
@@ -34,7 +34,7 @@ public class Servlet extends HttpServlet {
 			if (InputValidator.inputBase64(string)) {
 				converter = Converter.fromBase64String(string);
 			} else {
-				request.setAttribute("error", "illegal input: Base64");
+				request.setAttribute("base64Error", "illegal input: Base64");
 				converter = Converter.fromBase64String("");
 			}			
 		} else if (request.getParameter("submitDecimal") != null) {
@@ -42,7 +42,7 @@ public class Servlet extends HttpServlet {
 			if (InputValidator.inputDecimal(string)) {
 				converter = Converter.fromDecimalString(string);
 			} else {
-				request.setAttribute("error", "illegal input: Decimal");
+				request.setAttribute("decimalError", "illegal input: Decimal");
 				converter = Converter.fromDecimalString("");
 			}		
 		} else if (request.getParameter("submitHexadecimal") != null) {
@@ -50,7 +50,7 @@ public class Servlet extends HttpServlet {
 			if (InputValidator.inputHexadecimal(string)) {
 				converter = Converter.fromHexadecimalString(string);
 			} else {
-				request.setAttribute("error", "illegal input: Hexadecimal");
+				request.setAttribute("hexadecimalError", "illegal input: Hexadecimal");
 				converter = Converter.fromHexadecimalString("");
 			}		
 		} else if (request.getParameter("submitBinary") != null) {
@@ -58,7 +58,7 @@ public class Servlet extends HttpServlet {
 			if (InputValidator.inputBinary(string)) {
 				converter = Converter.fromBinaryString(string);
 			} else {
-				request.setAttribute("error", "illegal input: Binary");
+				request.setAttribute("binaryError", "illegal input: Binary");
 				converter = Converter.fromBinaryString("");
 			}		
 		} else {
