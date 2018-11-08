@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/login.do")
 public class Servlet extends HttpServlet {
-
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {

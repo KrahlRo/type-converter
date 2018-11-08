@@ -2,7 +2,6 @@ package webapp;
 
 public class InputValidator {
 
-
 	public static boolean inputIso_8859_1 (String iso_8859_1String) {
 		//return Charset.forName("ISO_8859_1").newEncoder().canEncode(iso_8859_1String);
 		return true;
