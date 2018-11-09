@@ -20,7 +20,7 @@ public class Converter {
 	}
 
 	public static Converter fromDecimalString(String decimalString) {
-		if (decimalString.isEmpty()) {
+		if (decimalString.isEmpty()) {	//corner case
 			return new Converter(new byte[0]);
 		}
 		String[] parts = decimalString.split(",");
